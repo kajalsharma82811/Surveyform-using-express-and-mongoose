@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FreeCodeCamp Survey Form</title>
+	<style>
+		body{
+	background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%, #801357 71%, #3d1635 84%, #1c1a27 100%);
+    font-family: 'Lato', sans-serif;
+    
+}
+.mainheading{
+	color:white;
+	text-align:center;
+	margin-top:50px;
+	font-weight:400;
+	font-family: 'Lato', sans-serif;
+	 
+}.secondheading{
+	color:white;
+	text-align:center;
+	
+	font-weight:100;
+	font-family: 'Lato', sans-serif;
+
+}
+
+.form{
+	overflow-y:scroll;
+	margin-top:50px;
+	background-color:rgb(43,41,73);
+	opacity:0.9;
+	display:flex;
+	flex-direction:column;
+	width:50vw;
+	height:110vh;
+	margin-left:380px;
+	align-items:center;
+	padding-top:30px;
+	font-family: 'Lato', sans-serif;
+	font-weight:100;
+	/*justify-content:center;*/
+	
+	
+}label{
+	padding-top:30px;
+	font-size:20px;
+	color:white;
+	font-weight:bold;
+
+}#email{
+		font-size:15px;
+
+	width:550px;
+	height:30px;
+	justify-content:center;
+	outline:none;
+	border-radius:5px;
+	margin-top:10px;
+}#name{
+	font-size:15px;
+	margin-top:10px;
+
+	width:550px;
+	height:30px;
+	justify-content:center;
+	outline:none;
+	border-radius:5px;
+}#age{
+	font-size:15px;
+	margin-top:10px;
+
+	width:550px;
+	height:30px;
+	justify-content:center;
+	outline:none;
+	border-radius:5px;
+}.bestoption{
+	width:550px;
+	height:30px;
+	font-size:15px;
+	margin-top:10px;
+	
+
+}.recommend{
+	margin-left: -61px;
+}#comments{
+	width: 500px;
+	height:100px;
+	text-align:top;
+	margin-top:10px;
+	font-size:20px;
+	
+}#frontend{
+	margin-top:10px;
+
+}.button{
+	width:500px;
+	height:50px;
+	text-align:center;
+	background-color:#3CB371;
+	/*margin-top:10px;*/
+	border:2px solid black;
+	justify-content:center;
+	font-size:20px;
+	margin-bottom:20px;
+	color:white;
+
+}
+	</style>
+
+</head>
+<body>
+
+	<div class="container">
+		
+		<h1 class="mainheading">freeCodeCamp Survey Form</h1>
+		<h3 class="secondheading"><i>Thank you for taking the time to help us improve the platform</i></h3>
+	    
+	    
+	    	<form class="form" method="POST" action="/addname">
+	        <label for="name">Name<br>
+	        	<input type="text" name="name" id="name" placeholder="Enter your name" required>
+	        </label>
+	        <label for="email">Email<br>
+	        	<input type="email" name="email" id="email" placeholder="Enter your email"required>
+	        </label>
+	        <label for="age">Age<small> (optional)</small><br>
+	        	<input type="text" name="age" id="age" placeholder="Enter your age" required>
+	        </label>
+
+	        <label for="age">Which option best describes your current role?<br>
+	        	<select class="bestoption">
+	        		<option selected disabled>Select Current role</option>
+	        		<option>Student</option>
+	        		<option>Full Time Job</option>
+	        		<option>Full Time Learner</option>
+	        		<option>Prefer not to Say</option>
+	        		<option>Other</option>
+	        	</select>
+	        </label>
+
+
+	        <label for="recommend" class="recommend">Would you recommend freeCodeCamp to a friend?<br>
+	        	<input type="radio" id="recommend" name="recommend" value="male">
+				<label for="male">Definitely</label><br>
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Maybe</label><br>
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Not sure</label>
+			</label>
+
+
+			<label for="bestoption">Which option best describes your current role?<br>
+	        	<select class="bestoption">
+	        		<option selected disabled>Select an option</option>
+	        		<option>Challanges</option>
+	        		<option>Projects</option>
+	        		<option>Community</option>
+	        		<option>Open Source</option>
+	        		
+	        	</select>
+	        </label>
+
+
+	        <label for="improve">What would you like to see improved? <small>(Check all that apply)</small><br>
+	        	<input type="checkbox" id="frontend" name="frontend" value="frontend">
+				<label for="frontend">Front-end Projects</label><br>
+				<input type="checkbox" id="frontend" name="backend" value="backend">
+				<label for="backend">Back-end Projects</label><br>
+				<input type="checkbox" id="frontend" name="data" value="data">
+				<label for="data">Data Visualisation</label><br>
+				<input type="checkbox" id="frontend" name="Challanges" value="Challanges">
+				<label for="Challanges">Challanges</label><br>
+				<input type="checkbox" id="frontend" name="Community" value="Community">
+				<label for="backend">Open Source Community</label><br>
+				<input type="checkbox" id="frontend" name="rooms" value="rooms">
+				<label for="data">Gitter help rooms</label><br>
+				<input type="checkbox" id="frontend" name="Videos" value="Videos">
+				<label for="backend">Videos</label><br>
+				<input type="checkbox" id="frontend" name="Meetups" value="Meetups">
+				<label for="data">City Meetups</label><br>
+				<input type="checkbox" id="frontend" name="Wiki" value="Wiki">
+				<label for="backend">Wiki</label><br>
+				<input type="checkbox" id="frontend" name="Forum" value="Forum">
+				<label for="data">Forum</label><br>
+				<input type="checkbox" id="frontend" name="Additional" value="Additional">
+				<label for="data">Additional Courses</label><br>
+	        </label>
+
+	        <label for="comments">Any comments or suggestions?<br>
+	<textarea name="comment" form="usrform" id="comments" placeholder="Enter comments here..."></textarea></label><br>
+
+
+	        <input type="submit" value="Submit"class="button"></submit>
+	        
+	    
+	    </form>
+	    
+
+	</div>
+
+
+</html>
